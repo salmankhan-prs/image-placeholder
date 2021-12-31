@@ -17,10 +17,10 @@ const conversion = async (type, width = 400, height = 400, g) => {
 };
 
 router.get("/", async (req, res) => {
-  res.send(result);
+  res.json("Hello from Image placeholder");
 });
 router.get("/flower", async (req, res) => {
-  let g = req.query.g === undefined ? false : !req.query.g;
+  let g = req.query.g === undefined ? false : req.query.g;
 
   let w = !req.query.w ? 400 : req.query.w;
   let h = !req.query.h ? 400 : req.query.h;
@@ -29,7 +29,7 @@ router.get("/flower", async (req, res) => {
   res.send(result);
 });
 router.get("/furnitures", async (req, res) => {
-  let g = req.query.g === undefined ? false : !req.query.g;
+  let g = req.query.g === undefined ? false : req.query.g;
 
   let w = !req.query.w ? 400 : req.query.w;
   let h = !req.query.h ? 400 : req.query.h;
@@ -40,7 +40,7 @@ router.get("/furnitures", async (req, res) => {
 });
 
 router.get("/houses", async (req, res) => {
-  let g = req.query.g === undefined ? false : !req.query.g;
+  let g = req.query.g === undefined ? false : req.query.g;
 
   let w = !req.query.w ? 400 : req.query.w;
   let h = !req.query.h ? 400 : req.query.h;
@@ -50,7 +50,7 @@ router.get("/houses", async (req, res) => {
   res.send(result);
 });
 router.get("/computer", async (req, res) => {
-  let g = req.query.g === undefined ? false : !req.query.g;
+  let g = req.query.g === undefined ? false : req.query.g;
   let w = !req.query.w ? 400 : req.query.w;
   let h = !req.query.h ? 400 : req.query.h;
 
